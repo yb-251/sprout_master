@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sprout.login.CustomVideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_splendid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录后更精彩"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_32"
+            android:layout_marginTop="@dimen/dp_80"
+            android:layout_marginLeft="@dimen/dp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_70"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_splendid">
+
+            <include layout="@layout/acticity_writelogin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_70"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tv_splendid">
+
+            <include layout="@layout/activity_sendlogin" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_70"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/tv_splendid"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="182*****407"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_32"
+                android:layout_marginRight="@dimen/dp_32"
+                android:background="@drawable/phone_login"
+                android:text="本机号码一键登录"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tv_elselogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="其他号码登录"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textColor="@color/white1"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_else_mode_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他方式登录"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/white1"
+                android:textSize="@dimen/sp_11"/>
+
+            <LinearLayout
+                android:id="@+id/ll_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_15"
+                app:layout_constraintTop_toBottomOf="@+id/tv_else_mode_login">
+
+                <ImageView
+                    android:id="@+id/iv_wb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/login_btn_weibo_normal" />
+
+                <ImageView
+                    android:id="@+id/iv_wx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:src="@mipmap/login_btn_wechat_normal" />
+
+                <ImageView
+                    android:id="@+id/iv_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:src="@mipmap/login_btn_qq_normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登录表示您已阅读并同意 用户协议 | 隐私条款"
+                android:textColor="#fff"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/ll_images"/>
+
+            <TextView
+                android:id="@+id/tv_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="以及  中国移动认证服务条款"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text2"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

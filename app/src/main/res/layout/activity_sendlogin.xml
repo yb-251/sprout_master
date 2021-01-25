@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_loginsend"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/phone_verify"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="请输入电话号码"
+            android:textColor="#171616"
+            android:textSize="18dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv_86"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_86"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableRight="@mipmap/bottom"
+            android:padding="4dp"
+            android:text="+86"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/et_login"
+            app:layout_constraintLeft_toLeftOf="@id/cl_phone"
+            app:layout_constraintTop_toTopOf="@id/et_login" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_verify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_phone">
+
+
+        <Button
+            android:id="@+id/tv_anew_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/phone_verify"
+            android:textColor="#F4F4F4"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:hint="请输入验证码"
+        android:textColor="#fff"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_verify" />
+
+    <com.king.view.splitedittext.SplitEditText
+        android:id="@+id/splitEditText"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:inputType="number"
+        android:textColor="#ff00ff"
+        app:layout_constraintTop_toBottomOf="@id/tv_verify" />
+
+
+    <!--    setStrokeWidth  dimension  1dp    画笔描边的宽度-->
+    <!--    setBorderColor color  #FF666666  边框颜色-->
+    <!--    setInputBorderColor    color  #FF1E90FF  已输入文本的边框颜色-->
+    <!--    setFocusBorderColor    color     焦点框的边框颜色-->
+    <!--    setBoxBackgroundColor  color     框的背景颜色-->
+    <!--    setBorderCornerRadius  dimension  0dp    框的圆角大小（当 BorderSpacing 为 0dp 时，只有最左和最右两端的框有圆角）-->
+    <!--    setBorderSpacing   dimension  8dp    框与框之间的间距大小-->
+    <!--    setMaxLength   integer    6  允许输入的最大长度（框个数量）-->
+    <!--    setBorderStyle enum   box    边框风格-->
+    <!--    setTextStyle   enum   plain_text 文本风格（可以是明文或者密文，默认：明文）-->
+    <!--    setCipherMask  string *  密文掩码（当 TextStyle 为密文时，可自定义密文掩码）-->
+    <!--    setFakeBoldText    boolean    false  是否是粗体-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

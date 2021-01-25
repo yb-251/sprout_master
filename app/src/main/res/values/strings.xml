@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">绿洲</string>
+    <string name="hint_login_username">请输入用户名</string>
+    <string name="hint_login_pw">请输入密码</string>
+</resources>
